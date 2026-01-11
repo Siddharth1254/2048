@@ -35,7 +35,7 @@ The project is organized into two packages:
 ---
 
 ## Task 1: Understanding Tilts
-![2048 Tilting Animation](/img/2048-example.gif)
+![2048 Tilting Animation](/img/example-2048.gif)
 The animation above shows a few tilt operations. Here are the full rules for when merges occur that are shown in the image above.
 1. Two tiles of the same value merge into one tile with double the value.
 2. **No Double Merges:** A tile that is the result of a merge will not merge again on that same tilt.
