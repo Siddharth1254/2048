@@ -1,5 +1,5 @@
 ---
-title: Home
+title: About the template
 layout: home
 nav_order: 2
 ---

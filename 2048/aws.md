@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Host on AWS"
-parent: "Project 0: 2048"
+parent: "2048"
 nav_order: 3
 ---
 
