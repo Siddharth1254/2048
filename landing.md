@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Landing Page"
-parent: "2048"
 nav_order: 1
 ---
 
