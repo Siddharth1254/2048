@@ -15,6 +15,16 @@ nav_order: 2
 
 ---
 
+## Play the Game
+
+The game is live and deployed on AWS Elastic Beanstalk:
+
+**▶️ [Play 2048 Now!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)**
+
+Use the **arrow keys** to slide tiles. When two tiles with the same number collide, they merge!
+
+---
+
 ## Motivation
 
 This project was inspired by the UC Berkeley CS 61B course, where students implement the game 2048 to practice data structures and algorithms. We extended this idea by building a full-stack Python web application and deploying it on AWS, combining software development with cloud infrastructure skills.

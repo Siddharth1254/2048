@@ -6,9 +6,16 @@ nav_order: 1
 
 # 🎮 Project 2048
 
-Welcome! This project is a **full-stack Python implementation** of the classic 2048 sliding puzzle game, built with Flask and designed for deployment on AWS Elastic Beanstalk.
+Welcome! This project is a **full-stack Python implementation** of the classic 2048 sliding puzzle game, built with Flask and deployed on AWS Elastic Beanstalk.
 
 ![2048 Game Demo](/img/example-2048.gif){: .game-preview }
+
+---
+
+## ▶️ Play Now
+
+[🎮 Play 2048 Live!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[View Source Code](https://github.com/Siddharth1254/2048/tree/main/projects/2048-flask-game){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -18,16 +25,8 @@ Welcome! This project is a **full-stack Python implementation** of the classic 2
 |---|---------|---------------|
 | 📖 | [Project Overview](landing.html) | Motivation, goals, and architecture |
 | 🔨 | [Build the Game](docs/build.html) | Step-by-step guide to the game logic |
-| ▶️ | [Play the Game](docs/game.html) | Run the game locally on your machine |
+| ▶️ | [Play the Game](docs/game.html) | How to play and game controls |
 | ☁️ | [Host on AWS](docs/aws.html) | Deploy to AWS Elastic Beanstalk |
-
----
-
-## ▶️ Live Demo
-
-<!-- Replace the URL below with your deployed game link -->
-[🎮 Click here to play 2048 live!](https://your-deployed-url.example.com){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View Source Code](https://github.com/Siddharth1254/2048/tree/main/projects/2048-flask-game){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -42,7 +41,9 @@ Welcome! This project is a **full-stack Python implementation** of the classic 2
 
 ---
 
-## 🚀 Quick Start
+## 💻 Run Locally (Optional)
+
+If you'd like to run the game on your own machine:
 
 ```bash
 git clone https://github.com/Siddharth1254/2048.git

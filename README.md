@@ -1,13 +1,12 @@
 # 🎮 Project 2048
 
-A full-stack Python implementation of the classic **2048** sliding puzzle game, built with **Flask** and deployable on **AWS Elastic Beanstalk**.
+A full-stack Python implementation of the classic **2048** sliding puzzle game, built with **Flask** and deployed on **AWS Elastic Beanstalk**.
 
 ![2048 Game Demo](img/example-2048.gif)
 
-**📖 Live Documentation:** [siddharth1254.github.io/2048](https://siddharth1254.github.io/2048/)
+**▶️ Play Now:** [2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)
 
-<!-- Replace the URL below with your deployed game link -->
-**▶️ Play Live:** [your-deployed-url.example.com](https://your-deployed-url.example.com)
+**📖 Documentation:** [siddharth1254.github.io/2048](https://siddharth1254.github.io/2048/)
 
 ---
 
@@ -54,16 +53,17 @@ This project was inspired by the [UC Berkeley CS 61B](https://sp25.datastructur.
 
 ---
 
-## 🚀 Quick Start
+## 💻 Run Locally (Optional)
+
+If you prefer to run the game on your own machine instead of the live version:
 
 ```bash
 git clone https://github.com/Siddharth1254/2048.git
 cd 2048/projects/2048-flask-game
 pip install -r requirements.txt
 python application.py
+# Open http://127.0.0.1:5000
 ```
-
-Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser and play!
 
 ---
 
@@ -73,7 +73,7 @@ Visit the [live documentation site](https://siddharth1254.github.io/2048/) for:
 
 - [Project Overview](https://siddharth1254.github.io/2048/landing.html) — Motivation and architecture
 - [Build the Game](https://siddharth1254.github.io/2048/docs/build.html) — Game logic walkthrough
-- [Play the Game](https://siddharth1254.github.io/2048/docs/game.html) — Run instructions
+- [Play the Game](https://siddharth1254.github.io/2048/docs/game.html) — How to play
 - [Host on AWS](https://siddharth1254.github.io/2048/docs/aws.html) — Deployment guide
 
 ---

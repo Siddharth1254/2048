@@ -16,7 +16,38 @@ nav_order: 2
 
 ---
 
-## Running Locally
+## Play Online
+
+The game is deployed and ready to play:
+
+**▶️ [Play 2048 Now!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)**
+
+No installation required — just click and play!
+
+## How to Play
+
+- Use the **arrow keys** to slide tiles in any direction
+- When two tiles with the **same number** touch, they merge (e.g., 2+2=4, 4+4=8)
+- Reach the **2048** tile to win
+- The game ends when no more moves are possible
+
+![2048 gameplay](/img/example-2048.gif)
+
+## Game Controls
+
+| Key | Action |
+|-----|--------|
+| ↑ Arrow | Move tiles up |
+| ↓ Arrow | Move tiles down |
+| ← Arrow | Move tiles left |
+| → Arrow | Move tiles right |
+| New Game button | Reset the board |
+
+---
+
+## Run Locally (Optional)
+
+If you'd prefer to run the game on your own machine:
 
 ### 1. Clone the repository
 
@@ -40,22 +71,3 @@ python application.py
 ### 4. Open the game
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
-
-## How to Play
-
-- Use the **arrow keys** to slide tiles in any direction
-- When two tiles with the **same number** touch, they merge (e.g., 2+2=4, 4+4=8)
-- Reach the **2048** tile to win
-- The game ends when no more moves are possible
-
-![2048 gameplay](/img/example-2048.gif)
-
-## Game Controls
-
-| Key | Action |
-|-----|--------|
-| ↑ Arrow | Move tiles up |
-| ↓ Arrow | Move tiles down |
-| ← Arrow | Move tiles left |
-| → Arrow | Move tiles right |
-| New Game button | Reset the board |
