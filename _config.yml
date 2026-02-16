@@ -1,8 +1,14 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Project 2048
+description: A Flask-based 2048 game with AWS Elastic Beanstalk deployment guide
 theme: just-the-docs
 
-url: https://davygeons.github.io/2048
+url: https://siddharth1254.github.io/2048
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  GitHub Repository: https://github.com/Siddharth1254/2048
+
+# Exclude non-Jekyll files from the build
+exclude:
+  - projects/
+  - README.md
+  - LICENSE

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <meta name="description" content="Play 2048 - a fun sliding puzzle game. Combine tiles to reach 2048!">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2048</h1>
+            <div class="score-container">
+                <div class="score-label">Score</div>
+                <div id="score">{{ game_state.score }}</div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <!-- Game grid -->
+            <div id="grid" class="grid">
+                {% for row in game_state.grid %}
+                    {% for cell in row %}
+                        <div class="cell cell-{{ cell }}">
+                            {% if cell != 0 %}{{ cell }}{% endif %}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <!-- Game over overlay -->
+            <div id="game-over" class="overlay {% if not game_state.game_over %}hidden{% endif %}">
+                <div class="overlay-content">
+                    <h2>Game Over!</h2>
+                    <p>Final Score: <span id="final-score">{{ game_state.score }}</span></p>
+                    <button id="try-again-btn" class="btn">Try Again</button>
+                </div>
+            </div>
+
+            <!-- Win overlay -->
+            <div id="win" class="overlay {% if not game_state.won %}hidden{% endif %}">
+                <div class="overlay-content win-content">
+                    <h2>You Win!</h2>
+                    <p>Congratulations! You reached 2048!</p>
+                    <button id="keep-playing-btn" class="btn">Keep Playing</button>
+                    <button id="new-game-after-win-btn" class="btn btn-secondary">New Game</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="new-game-btn" class="btn">New Game</button>
+        </div>
+
+        <div class="instructions">
+            <p><strong>How to play:</strong> Use arrow keys to move tiles. 
+            When two tiles with the same number touch, they merge into one!</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

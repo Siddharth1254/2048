@@ -1,0 +1,277 @@
+/*
+ * 2048 Game Styles
+ * Classic 2048 color scheme with clean, functional design
+ */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faf8ef;
+    color: #776e65;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #776e65;
+}
+
+.score-container {
+    background-color: #bbada0;
+    padding: 10px 25px;
+    border-radius: 6px;
+    color: white;
+    min-width: 100px;
+}
+
+.score-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #eee4da;
+}
+
+#score {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Game container */
+.game-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Grid styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #cdc1b4;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: #776e65;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Classic 2048 tile colors */
+.cell-0 {
+    background-color: rgba(238, 228, 218, 0.35);
+}
+
+.cell-2 {
+    background-color: #eee4da;
+    color: #776e65;
+}
+
+.cell-4 {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+
+.cell-8 {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.cell-16 {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.cell-32 {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.cell-64 {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.cell-128 {
+    background-color: #edcf72;
+    color: #f9f6f2;
+    font-size: 40px;
+}
+
+.cell-256 {
+    background-color: #edcc61;
+    color: #f9f6f2;
+    font-size: 40px;
+}
+
+.cell-512 {
+    background-color: #edc850;
+    color: #f9f6f2;
+    font-size: 40px;
+}
+
+.cell-1024 {
+    background-color: #edc53f;
+    color: #f9f6f2;
+    font-size: 32px;
+}
+
+.cell-2048 {
+    background-color: #edc22e;
+    color: #f9f6f2;
+    font-size: 32px;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.5);
+}
+
+/* For tiles beyond 2048 */
+.cell-4096,
+.cell-8192,
+.cell-16384,
+.cell-32768,
+.cell-65536 {
+    background-color: #3c3a32;
+    color: #f9f6f2;
+    font-size: 28px;
+}
+
+/* Overlay styles (game over / win) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(238, 228, 218, 0.73);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.overlay h2 {
+    font-size: 48px;
+    color: #776e65;
+    margin-bottom: 20px;
+}
+
+.win-content h2 {
+    color: #f59563;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn {
+    background-color: #8f7a66;
+    color: #f9f6f2;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #9f8b77;
+}
+
+.btn-secondary {
+    background-color: #bbada0;
+}
+
+.btn-secondary:hover {
+    background-color: #cbbfb3;
+}
+
+/* Controls */
+.controls {
+    margin-top: 20px;
+}
+
+/* Instructions */
+.instructions {
+    margin-top: 20px;
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 48px;
+    }
+    
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    
+    .cell-128,
+    .cell-256,
+    .cell-512 {
+        font-size: 24px;
+    }
+    
+    .cell-1024,
+    .cell-2048 {
+        font-size: 20px;
+    }
+    
+    .grid {
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .overlay h2 {
+        font-size: 36px;
+    }
+}

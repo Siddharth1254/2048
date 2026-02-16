@@ -1,13 +1,51 @@
 ---
 layout: default
-title: "Landing Page"
-nav_order: 1
+title: "Project Overview"
+nav_order: 2
 ---
 
-# Landing Page
+# Project Overview
 {: .no_toc }
 
-## Welcome to Project 2048
+## Table of contents
+{: .no_toc .text-delta }
 
-This is the landing page for Project 2048. 
-The inspiration comes when Yiwei was taking Berkeley cs61b, a computer science course about data structure and algorithm. In one of the projects of that course, students were to create a playable game of 2048. We think it could be a lot of fun to bring such a game to the class, and have a bit of competition for students. More important, this semester PGE3-EN students are to work for the AWS Certified Cloud Practitioner certificate. By hosting this game on AWS, it provides us a good practice of using AWS, and the experience is worth sharing with other students. Therefore, this project can contribute to the AWS certificate, which in turn enriches our CV. 
+1. TOC
+{:toc}
+
+---
+
+## Motivation
+
+This project was inspired by the UC Berkeley CS 61B course, where students implement the game 2048 to practice data structures and algorithms. We extended this idea by building a full-stack Python web application and deploying it on AWS, combining software development with cloud infrastructure skills.
+
+## Goals
+
+1. **Build** a fully playable 2048 game using Python and Flask
+2. **Understand** the client-server architecture (frontend ↔ backend communication)
+3. **Deploy** the application to AWS Elastic Beanstalk
+4. **Document** the entire process as a learning resource
+
+## How the Application Works
+
+```
+User presses arrow key
+      ↓
+JavaScript sends POST request to /move/<direction>
+      ↓
+Flask route calls game.move() with the direction
+      ↓
+Game logic updates the grid and score
+      ↓
+Flask returns new game state as JSON
+      ↓
+JavaScript updates the page with new tiles
+```
+
+## Project Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `projects/2048-flask-game/` | Flask application source code |
+| `2048/` | Documentation pages (this site) |
+| `img/` | Images and animations |
