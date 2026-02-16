@@ -4,26 +4,51 @@ layout: home
 nav_order: 1
 ---
 
-# Project 2048
+# 🎮 Project 2048
 
-Welcome to Project 2048 — a hands-on project to build, play, and deploy a 2048 game using Python, Flask, and AWS.
+Welcome! This project is a **full-stack Python implementation** of the classic 2048 sliding puzzle game, built with Flask and designed for deployment on AWS Elastic Beanstalk.
 
-## What You'll Find Here
+![2048 Game Demo](/img/example-2048.gif){: .game-preview }
 
-| Section | Description |
-|---------|-------------|
-| [Project Overview](landing.html) | Motivation, goals, and how the application works |
-| [Build the Game](2048/build.html) | Step-by-step guide to implementing the 2048 game logic |
-| [Play the Game](2048/game.html) | Instructions to run and play the game locally |
-| [Host on AWS](2048/aws.html) | Deploy the Flask app to AWS Elastic Beanstalk |
+---
 
-## Tech Stack
+## 📍 Explore the Project
 
-- **Backend:** Python + Flask
-- **Frontend:** HTML, CSS, JavaScript
-- **Deployment:** AWS Elastic Beanstalk
-- **Documentation:** Jekyll + GitHub Pages (this site)
+| | Section | What's Inside |
+|---|---------|---------------|
+| 📖 | [Project Overview](landing.html) | Motivation, goals, and architecture |
+| 🔨 | [Build the Game](docs/build.html) | Step-by-step guide to the game logic |
+| ▶️ | [Play the Game](docs/game.html) | Run the game locally on your machine |
+| ☁️ | [Host on AWS](docs/aws.html) | Deploy to AWS Elastic Beanstalk |
 
-## Source Code
+---
 
-The Flask game source code lives in the [`projects/2048-flask-game/`](https://github.com/Siddharth1254/2048/tree/main/projects/2048-flask-game) directory of this repository.
+## ▶️ Live Demo
+
+<!-- Replace the URL below with your deployed game link -->
+[🎮 Click here to play 2048 live!](https://your-deployed-url.example.com){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[View Source Code](https://github.com/Siddharth1254/2048/tree/main/projects/2048-flask-game){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Backend** | Python 3 + Flask |
+| **Frontend** | HTML, CSS, JavaScript |
+| **Deployment** | AWS Elastic Beanstalk |
+| **Documentation** | Jekyll + GitHub Pages |
+
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/Siddharth1254/2048.git
+cd 2048/projects/2048-flask-game
+pip install -r requirements.txt
+python application.py
+```
+
+Then open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.

@@ -47,5 +47,5 @@ JavaScript updates the page with new tiles
 | Directory | Purpose |
 |-----------|---------|
 | `projects/2048-flask-game/` | Flask application source code |
-| `2048/` | Documentation pages (this site) |
+| `docs/` | Documentation pages (this site) |
 | `img/` | Images and animations |
