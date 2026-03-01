@@ -19,6 +19,14 @@ Welcome! This project is a **full-stack Python implementation** of the classic 2
 
 ---
 
+## 💬 Give Us Your Feedback
+
+We'd love to hear what you think! Whether it's a bug, a suggestion, or just a ⭐ — your feedback helps us improve.
+
+[📝 Played the game? Share your thoughts here](https://docs.google.com/forms/d/e/1FAIpQLSdb99fJnHfl-7gU2Qvk3_c_Ubpp6UxszaKgWYjAfGTyzR2ZKw/viewform?usp=publish-editor){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 }
+
+---
+
 ## 📍 Explore the Project
 
 | | Section | What's Inside |

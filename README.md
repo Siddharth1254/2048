@@ -8,6 +8,8 @@ A full-stack Python implementation of the classic **2048** sliding puzzle game, 
 
 **📖 Documentation:** [siddharth1254.github.io/2048](https://siddharth1254.github.io/2048/)
 
+**💬 Feedback:** [Played the game? Share your thoughts here](https://docs.google.com/forms/d/e/1FAIpQLSdb99fJnHfl-7gU2Qvk3_c_Ubpp6UxszaKgWYjAfGTyzR2ZKw/viewform?usp=publish-editor)
+
 ---
 
 ## 📍 About
