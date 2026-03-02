@@ -8,7 +8,7 @@ nav_order: 1
 
 Welcome! This project is a **full-stack Python implementation** of the classic 2048 sliding puzzle game, built with Flask and deployed on AWS Elastic Beanstalk.
 
-![2048 Game Demo](/img/example-2048.gif){: .game-preview }
+![2048 Game Demo]({{ '/img/example-2048.gif' | relative_url }}){: .game-preview }
 
 ---
 

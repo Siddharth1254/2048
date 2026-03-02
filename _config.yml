@@ -2,7 +2,8 @@ title: Project 2048
 description: A Flask-based 2048 game with AWS Elastic Beanstalk deployment guide
 theme: just-the-docs
 
-url: https://siddharth1254.github.io/2048
+url: https://siddharth1254.github.io
+baseurl: /2048
 
 aux_links:
   GitHub Repository: https://github.com/Siddharth1254/2048
