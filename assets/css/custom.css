@@ -1,62 +1,165 @@
 /*
  * Custom CSS for the Project 2048 Jekyll site
- * Extends the Just the Docs theme with subtle refinements
+ * Extends the Just the Docs theme with a warm 2048-inspired design
  */
+
+/* ===== Google Fonts — applied via CSS variables ===== */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.nav-list-item {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ===== Warm 2048 color palette (CSS variable overrides) ===== */
+:root {
+  --link-color: #d4693a;
+  --sidebar-color: #fdf8f3;
+  --body-background-color: #fffff8;
+  --body-heading-color: #2d2a26;
+  --body-text-color: #4a4540;
+  --border-color: #ede7de;
+  --base-button-color: #f59563;
+  --code-background-color: #fdf3eb;
+}
+
+/* ===== Sidebar refinements ===== */
+.side-bar {
+  background-color: var(--sidebar-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.site-title {
+  color: #c95f2a !important;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+/* Active nav item — warm left-border accent */
+.nav-list .nav-list-item > .nav-list-link.active {
+  color: #c95f2a;
+  font-weight: 700;
+  border-left: 3px solid #f59563;
+  padding-left: calc(1rem - 3px);
+}
+
+/* ===== Main content area ===== */
+.main-content-wrap {
+  background-color: var(--body-background-color);
+}
+
+/* ===== Section headers ===== */
+.main-content h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d2a26;
+  letter-spacing: -0.5px;
+}
+
+.main-content h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #f0e8dc;
+  font-weight: 700;
+  color: #3d3530;
+}
 
 /* ===== Game preview image ===== */
 .game-preview {
   display: block;
-  max-width: 460px;
+  max-width: 480px;
   margin: 1.5rem auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(180, 100, 40, 0.15);
+  border: 2px solid #f0e0cc;
 }
 
-/* ===== Section headers with emojis ===== */
-.main-content h2 {
-  margin-top: 2.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid #e8e8e8;
-}
-
-/* ===== Tech stack and navigation tables ===== */
+/* ===== Tables ===== */
 .main-content table {
   border-collapse: collapse;
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .main-content table th {
-  background-color: #f6f8fa;
-  font-weight: 600;
+  background-color: #fdebd8;
+  font-weight: 700;
+  color: #3d2e20;
+  font-family: 'Nunito', sans-serif;
 }
 
 .main-content table td,
 .main-content table th {
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 1rem;
+  border-color: #f0e4d4;
+}
+
+.main-content table tr:hover td {
+  background-color: #fef6ee;
+  transition: background-color 0.15s ease;
 }
 
 /* ===== Code blocks ===== */
 .main-content pre {
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid #f0dfc8;
+  background-color: #fdf3eb;
+}
+
+.main-content code {
+  color: #c0522a;
+  background-color: #fdeee4;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
 }
 
 /* ===== Horizontal rules ===== */
 .main-content hr {
   border: none;
-  border-top: 1px solid #e8e8e8;
-  margin: 2rem 0;
+  border-top: 1px solid #ede7de;
+  margin: 2.2rem 0;
 }
 
 /* ===== Button refinements ===== */
+.btn {
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
 .btn-primary {
-  background-color: #f59563;
-  border-color: #f59563;
+  background: linear-gradient(135deg, #f59563, #e07040);
+  border-color: transparent;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #f67c5f;
-  border-color: #f67c5f;
+  background: linear-gradient(135deg, #f6a070, #e8825a);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #8b5cf6, #6d3fc4);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn-purple:hover {
+  background: linear-gradient(135deg, #9d70f8, #7d50d4);
+  border-color: transparent;
+  color: #fff;
 }
 
 /* ===== Responsive adjustments ===== */
