@@ -9,57 +9,98 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>2048</h1>
-            <div class="score-container">
-                <div class="score-label">Score</div>
-                <div id="score">{{ game_state.score }}</div>
-            </div>
-            <button id="dark-mode-btn" class="dark-toggle" title="Toggle dark mode">🌙</button>
-        </header>
+        <div class="game-layout">
 
-        <div class="game-container">
-            <!-- Game grid -->
-            <div id="grid" class="grid">
-                {% for row in game_state.grid %}
-                    {% for cell in row %}
-                        <div class="cell cell-{{ cell }}">
-                            {% if cell != 0 %}{{ cell }}{% endif %}
+            <!-- ── Left: game ── -->
+            <div class="game-side">
+                <header>
+                    <h1>2048</h1>
+                    <div class="score-container">
+                        <div class="score-label">Score</div>
+                        <div id="score">{{ game_state.score }}</div>
+                    </div>
+                    <button id="dark-mode-btn" class="dark-toggle" title="Toggle dark mode">🌙</button>
+                </header>
+
+                <div class="game-container">
+                    <!-- Game grid -->
+                    <div id="grid" class="grid">
+                        {% for row in game_state.grid %}
+                            {% for cell in row %}
+                                <div class="cell cell-{{ cell }}">
+                                    {% if cell != 0 %}{{ cell }}{% endif %}
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- Game over overlay -->
+                    <div id="game-over" class="overlay {% if not game_state.game_over %}hidden{% endif %}">
+                        <div class="overlay-content">
+                            <h2>Game Over!</h2>
+                            <p>Final Score: <span id="final-score">{{ game_state.score }}</span></p>
+                            <button id="try-again-btn" class="btn">Try Again</button>
                         </div>
-                    {% endfor %}
-                {% endfor %}
-            </div>
+                    </div>
 
-            <!-- Game over overlay -->
-            <div id="game-over" class="overlay {% if not game_state.game_over %}hidden{% endif %}">
-                <div class="overlay-content">
-                    <h2>Game Over!</h2>
-                    <p>Final Score: <span id="final-score">{{ game_state.score }}</span></p>
-                    <button id="try-again-btn" class="btn">Try Again</button>
+                    <!-- Win overlay -->
+                    <div id="win" class="overlay {% if not game_state.won %}hidden{% endif %}">
+                        <div class="overlay-content win-content">
+                            <h2>You Win!</h2>
+                            <p>Congratulations! You reached 2048!</p>
+                            <button id="keep-playing-btn" class="btn">Keep Playing</button>
+                            <button id="new-game-after-win-btn" class="btn btn-secondary">New Game</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="new-game-btn" class="btn">New Game</button>
+                </div>
+
+                <div class="instructions">
+                    <p><strong>How to play:</strong> Use arrow keys to move tiles.
+                    On mobile, <strong>swipe</strong> in any direction.
+                    When two tiles with the same number touch, they merge into one!</p>
                 </div>
             </div>
 
-            <!-- Win overlay -->
-            <div id="win" class="overlay {% if not game_state.won %}hidden{% endif %}">
-                <div class="overlay-content win-content">
-                    <h2>You Win!</h2>
-                    <p>Congratulations! You reached 2048!</p>
-                    <button id="keep-playing-btn" class="btn">Keep Playing</button>
-                    <button id="new-game-after-win-btn" class="btn btn-secondary">New Game</button>
-                </div>
+            <!-- ── Right: inline leaderboard ── -->
+            <div class="leaderboard-side">
+                <h3 class="lb-title">🏆 Top Scores</h3>
+                <table class="lb-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Best</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lb-tbody">
+                        {% for s in scores %}
+                        <tr>
+                            <td>
+                                {% if loop.index == 1 %}🥇
+                                {% elif loop.index == 2 %}🥈
+                                {% elif loop.index == 3 %}🥉
+                                {% else %}{{ loop.index }}{% endif %}
+                            </td>
+                            <td class="lb-name">{{ s.name }}</td>
+                            <td><strong>{{ s.score }}</strong></td>
+                            <td>{{ s.highest }}</td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4" class="lb-empty">No scores yet!<br>Play to get on the board 🎮</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
-        </div>
 
-        <div class="controls">
-            <button id="new-game-btn" class="btn">New Game</button>
-        </div>
-
-        <div class="instructions">
-            <p><strong>How to play:</strong> Use arrow keys to move tiles.
-            On mobile, <strong>swipe</strong> in any direction.
-            When two tiles with the same number touch, they merge into one!</p>
-        </div>
-    </div>
+        </div><!-- end .game-layout -->
+    </div><!-- end .container -->
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

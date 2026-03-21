@@ -388,3 +388,116 @@ body.dark-mode .instructions {
     color: #9a9790;
 }
 
+/* =====================================================
+   Tile Animations
+   ===================================================== */
+
+/* Merge — tiles that just doubled get a quick scale pop */
+@keyframes tile-pop {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* New tile — freshly spawned tile scales in */
+@keyframes tile-appear {
+    0%   { transform: scale(0);   opacity: 0; }
+    60%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1);   opacity: 1; }
+}
+
+.cell-merged { animation: tile-pop    0.18s ease; }
+.cell-new    { animation: tile-appear 0.22s ease; }
+
+/* =====================================================
+   Side-by-side game layout
+   ===================================================== */
+.game-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.game-side {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* ── Inline leaderboard panel ── */
+.leaderboard-side {
+    flex-shrink: 0;
+    width: 210px;
+    background-color: #f0e4d0;
+    border-radius: 8px;
+    padding: 14px 12px;
+    margin-top: 4px;           /* align with top of score box */
+}
+
+.lb-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #776e65;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.lb-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.lb-table th {
+    text-align: left;
+    color: #a09080;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 6px 6px;
+    border-bottom: 1px solid #ddd0c0;
+}
+
+.lb-table td {
+    padding: 6px 6px;
+    color: #776e65;
+    border-bottom: 1px solid #e8d8c4;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.lb-table tr:last-child td { border-bottom: none; }
+.lb-table tr:nth-child(1) td { font-weight: 700; }
+
+.lb-name {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lb-empty {
+    text-align: center;
+    color: #bbada0;
+    font-style: italic;
+    padding: 14px 4px;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+/* Dark mode — leaderboard panel */
+body.dark-mode .leaderboard-side  { background-color: #252538; }
+body.dark-mode .lb-title          { color: #d0cdc8; }
+body.dark-mode .lb-table th       { color: #8888aa; border-color: #3d3d5c; }
+body.dark-mode .lb-table td       { color: #d0cdc8; border-color: #2d2d44; }
+
+/* Mobile: stack game then leaderboard */
+@media (max-width: 700px) {
+    .game-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .leaderboard-side {
+        width: 100%;
+        max-width: 460px;
+    }
+}

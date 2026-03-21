@@ -183,15 +183,16 @@ class Game2048:
     def get_state(self):
         """
         Get the current game state as a dictionary.
-        
+
         This is used to send the game state to the frontend as JSON.
-        
+
         Returns:
-            dict with grid, score, game_over, and won status
+            dict with grid, score, game_over, won, and highest tile value
         """
         return {
             'grid': self.grid,
             'score': self.score,
             'game_over': self.game_over,
-            'won': self.won
+            'won': self.won,
+            'highest': max(max(row) for row in self.grid)
         }
