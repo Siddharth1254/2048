@@ -14,7 +14,7 @@ Welcome! This project is a **full-stack Python implementation** of the classic 2
 
 ## ▶️ Play Now
 
-[🎮 Play 2048 Live!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[🎮 Play 2048 Live!](http://52.23.198.175/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View Source Code](https://github.com/Siddharth1254/2048/tree/main/projects/2048-flask-game){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---

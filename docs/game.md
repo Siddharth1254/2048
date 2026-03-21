@@ -20,7 +20,7 @@ nav_order: 2
 
 The game is deployed and ready to play:
 
-**▶️ [Play 2048 Now!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)**
+**▶️ [Play 2048 Now!](http://52.23.198.175/)**
 
 No installation required — just click and play!
 

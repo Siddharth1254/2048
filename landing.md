@@ -19,7 +19,7 @@ nav_order: 2
 
 The game is live and deployed on AWS Elastic Beanstalk:
 
-**▶️ [Play 2048 Now!](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)**
+**▶️ [Play 2048 Now!](http://52.23.198.175/)**
 
 Use the **arrow keys** to slide tiles. When two tiles with the same number collide, they merge!
 

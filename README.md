@@ -4,7 +4,7 @@ A full-stack Python implementation of the classic **2048** sliding puzzle game, 
 
 ![2048 Game Demo](img/example-2048.gif)
 
-**▶️ Play Now:** [2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com](http://2048-game-env.eba-5ysiifwf.eu-north-1.elasticbeanstalk.com/)
+**▶️ Play Now:** [52.23.198.175](http://52.23.198.175/)
 
 **📖 Documentation:** [siddharth1254.github.io/2048](https://siddharth1254.github.io/2048/)
 
