@@ -130,4 +130,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // New Game button on win screen
     document.getElementById('new-game-after-win-btn').addEventListener('click', newGame);
+
+    // =========================================================
+    // Dark Mode Toggle
+    // =========================================================
+    const darkBtn = document.getElementById('dark-mode-btn');
+
+    // Restore saved preference on load
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        darkBtn.textContent = '☀️';
+    }
+
+    darkBtn.addEventListener('click', function () {
+        const isDark = document.body.classList.toggle('dark-mode');
+        this.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark);
+    });
+
+    // =========================================================
+    // Mobile Swipe Gestures
+    // =========================================================
+    let touchStartX = null;
+    let touchStartY = null;
+    const MIN_SWIPE_PX = 30; // minimum distance to register as a swipe
+
+    document.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+        if (touchStartX === null || touchStartY === null) return;
+
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+
+        touchStartX = null;
+        touchStartY = null;
+
+        // Ignore taps (movement too small)
+        if (Math.abs(dx) < MIN_SWIPE_PX && Math.abs(dy) < MIN_SWIPE_PX) return;
+
+        // Determine dominant direction
+        if (Math.abs(dx) > Math.abs(dy)) {
+            makeMove(dx > 0 ? 'right' : 'left');
+        } else {
+            makeMove(dy > 0 ? 'down' : 'up');
+        }
+    }, { passive: true });
 });

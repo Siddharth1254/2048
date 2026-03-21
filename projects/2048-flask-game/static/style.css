@@ -125,34 +125,34 @@ h1 {
 }
 
 .cell-128 {
-    background-color: #edcf72;
-    color: #f9f6f2;
+    background-color: #f9ca24; /* sunshine yellow */
+    color: #6e6550;
     font-size: 40px;
 }
 
 .cell-256 {
-    background-color: #edcc61;
+    background-color: #6ab04c; /* spring green */
     color: #f9f6f2;
     font-size: 40px;
 }
 
 .cell-512 {
-    background-color: #edc850;
+    background-color: #22a6b3; /* ocean teal */
     color: #f9f6f2;
     font-size: 40px;
 }
 
 .cell-1024 {
-    background-color: #edc53f;
+    background-color: #686de0; /* royal indigo */
     color: #f9f6f2;
     font-size: 32px;
 }
 
 .cell-2048 {
-    background-color: #edc22e;
+    background-color: #e84393; /* legendary magenta */
     color: #f9f6f2;
     font-size: 32px;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.5);
+    box-shadow: 0 0 30px 12px rgba(232, 67, 147, 0.55);
 }
 
 /* For tiles beyond 2048 */
@@ -275,3 +275,116 @@ h1 {
         font-size: 36px;
     }
 }
+
+/* =====================================================
+   Dark Mode Toggle Button
+   ===================================================== */
+.dark-toggle {
+    background: #bbada0;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.15s ease;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.dark-toggle:hover {
+    background: #a89a8e;
+    transform: scale(1.08);
+}
+
+/* =====================================================
+   Dark Mode Overrides
+   ===================================================== */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #d0cdc8;
+}
+
+body.dark-mode h1 {
+    color: #d0cdc8;
+}
+
+body.dark-mode .score-container {
+    background-color: #2d2d44;
+}
+
+body.dark-mode .dark-toggle {
+    background: #2d2d44;
+}
+
+body.dark-mode .dark-toggle:hover {
+    background: #3d3d5c;
+}
+
+/* Grid background */
+body.dark-mode .grid {
+    background-color: #2d2d44;
+}
+
+/* Empty cells */
+body.dark-mode .cell-0 {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Dark mode tile colours ── every value gets its own distinct shade ── */
+body.dark-mode .cell-2  { background-color: #3d3d5c; color: #c8c4d8; }
+body.dark-mode .cell-4  { background-color: #52407a; color: #d0cae8; }
+body.dark-mode .cell-8  { background-color: #c47838; color: #f9f6f2; }
+body.dark-mode .cell-16 { background-color: #c45e38; color: #f9f6f2; }
+body.dark-mode .cell-32 { background-color: #b44444; color: #f9f6f2; }
+body.dark-mode .cell-64 { background-color: #a42c20; color: #f9f6f2; }
+body.dark-mode .cell-128  { background-color: #c9a018; color: #f9f6f2; font-size: 40px; }
+body.dark-mode .cell-256  { background-color: #3aaa28; color: #f9f6f2; font-size: 40px; }
+body.dark-mode .cell-512  { background-color: #1898aa; color: #f9f6f2; font-size: 40px; }
+body.dark-mode .cell-1024 { background-color: #5555cc; color: #f9f6f2; font-size: 32px; }
+body.dark-mode .cell-2048 {
+    background-color: #cc2080;
+    color: #f9f6f2;
+    font-size: 32px;
+    box-shadow: 0 0 30px 12px rgba(204, 32, 128, 0.6);
+}
+
+/* Overlays */
+body.dark-mode .overlay {
+    background-color: rgba(26, 26, 46, 0.88);
+}
+
+body.dark-mode .overlay h2 {
+    color: #d0cdc8;
+}
+
+body.dark-mode .overlay p {
+    color: #b0ada8;
+}
+
+/* Buttons */
+body.dark-mode .btn {
+    background-color: #4a4a6a;
+    color: #f0ede8;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #5a5a8a;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #3a3a56;
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: #4a4a6a;
+}
+
+/* Instructions text */
+body.dark-mode .instructions {
+    color: #9a9790;
+}
+
