@@ -427,59 +427,96 @@ body.dark-mode .instructions {
 /* ── Inline leaderboard panel ── */
 .leaderboard-side {
     flex-shrink: 0;
-    width: 210px;
+    width: 270px;
     background-color: #f0e4d0;
-    border-radius: 8px;
-    padding: 14px 12px;
-    margin-top: 4px;           /* align with top of score box */
+    border-radius: 10px;
+    padding: 16px 14px;
+    margin-top: 4px;
 }
 
 .lb-title {
     font-size: 15px;
     font-weight: 700;
     color: #776e65;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: center;
+    letter-spacing: 0.01em;
 }
 
 .lb-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
+    table-layout: fixed; /* enforces column widths uniformly */
 }
 
-.lb-table th {
+/* ── Column-specific alignment (applies to BOTH th and td) ── */
+
+/* # rank column — narrow, centered */
+.lb-table th:nth-child(1),
+.lb-table td:nth-child(1) {
+    width: 28px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 4px;
+}
+
+/* Name column — left-aligned, truncate with ellipsis */
+.lb-table th:nth-child(2),
+.lb-table td:nth-child(2) {
     text-align: left;
-    color: #a09080;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 4px 6px 6px;
-    border-bottom: 1px solid #ddd0c0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
+/* Score column — right-aligned, fixed width */
+.lb-table th:nth-child(3),
+.lb-table td:nth-child(3) {
+    width: 58px;
+    text-align: right;
+}
+
+/* Best column — right-aligned, fixed width */
+.lb-table th:nth-child(4),
+.lb-table td:nth-child(4) {
+    width: 38px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+/* ── Header row ── */
+.lb-table th {
+    color: #a09080;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0 6px 8px;
+    border-bottom: 2px solid #d0c0ac;
+}
+
+/* ── Data rows ── */
 .lb-table td {
-    padding: 6px 6px;
+    padding: 7px 6px;
     color: #776e65;
     border-bottom: 1px solid #e8d8c4;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .lb-table tr:last-child td { border-bottom: none; }
-.lb-table tr:nth-child(1) td { font-weight: 700; }
 
-.lb-name {
-    max-width: 90px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/* Top 3 rows slightly bolder */
+.lb-table tbody tr:nth-child(1) td,
+.lb-table tbody tr:nth-child(2) td,
+.lb-table tbody tr:nth-child(3) td {
+    font-weight: 600;
 }
 
 .lb-empty {
     text-align: center;
     color: #bbada0;
     font-style: italic;
-    padding: 14px 4px;
+    padding: 16px 4px;
     line-height: 1.6;
     font-size: 12px;
 }
