@@ -2,7 +2,7 @@
 
 > *A student project exploring the journey from local development to cloud deployment.*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Play%20Now-orange?style=for-the-badge)](http://52.23.198.175/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Play%20Now-orange?style=for-the-badge)](http://2048-game-env.eba-bvnxciwa.eu-west-3.elasticbeanstalk.com/)
 [![GitHub](https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Siddharth1254/2048)
 [![Documentation](https://img.shields.io/badge/Docs-GitHub%20Pages-blue?style=for-the-badge)](https://siddharth1254.github.io/2048/)
 
